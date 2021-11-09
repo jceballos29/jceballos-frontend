@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Home() {
+function Services() {
     return (
         <div>
-            <h1>HOME</h1>
+            <h1>SERVICES</h1>
         </div>
     )
 }
 
-export default Home
+export default Services

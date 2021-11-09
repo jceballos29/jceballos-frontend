@@ -56,8 +56,71 @@ $font_color: #FFFFFF;
 .footer {
   width: 100%;
   height: 50px;
-  border-top: 1px solid $font_color;
   position: fixed;
   bottom: 0;
   left: 0;
+  font-size: 18px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "copy slider social_networks"; 
+
+    
+}
+
+.copy {
+  grid-area: copy;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.slider {
+  grid-area: slider;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .item_slider {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid $font_color;
+    margin: 0px 10px;
+    cursor: pointer;
+  }
+
+  .item_slider:hover{
+    background-color: #96ACB7;
+  }
+
+  .item_slider_selected {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid $font_color;
+    margin: 0px 10px;
+    cursor: pointer;
+    background-color: #96ACB7;
+    color: red;
+  }
+}
+
+.social_networks {
+  a {
+    color: $font_color;
+  }
+  grid-area: social_networks;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social_icon {
+  margin: 0px 25px;
+  cursor: pointer;
 }
